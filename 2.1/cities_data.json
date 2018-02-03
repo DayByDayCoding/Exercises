@@ -1,0 +1,39 @@
+{
+  "cities": [
+    {
+      "name": "Chongqing",
+      "population": "30165500",
+      "size_sq_km": "82403"
+    },
+    {
+      "name": "Shanghai",
+      "population": "24256800",
+      "size_sq_km": "6341"
+    },
+    {
+      "name": "Beijing",
+      "population": "21516000",
+      "size_sq_km": "16411"
+    },
+    {
+      "name": "Delhi",
+      "population": "16349831",
+      "size_sq_km": "1484"
+    },
+    {
+      "name": "Lagos",
+      "population": "16060303",
+      "size_sq_km": "1171"
+    },
+    {
+      "name": "Tianjin",
+      "population": "15200000",
+      "size_sq_km": "11760"
+    },
+    {
+      "name": "Karachi",
+      "population": "14910352",
+      "size_sq_km": "3527"
+    }
+  ]
+}
