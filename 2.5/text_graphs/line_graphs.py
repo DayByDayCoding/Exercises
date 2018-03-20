@@ -33,18 +33,26 @@ class LineGraphDrawer:
           row_string[column_number] = "*"
 
         spacing = " " * (WIDTH_SPACING - 1)
-        print(spacing.join(row_string))
+        print("|" + spacing.join(row_string))
       else:
-        print()
+        print("|")
+
+    # Bottom row
+    print("└" + ("-" * row_width * WIDTH_SPACING))
 
 
-drawer = LineGraphDrawer()
-# TODO add | and -- just for appearance
-drawer.draw_line_graph([3, 4, 5, 7, 4, 2, 1, 2])
+# DBDC students: Wondering what this __main__ thing is all about?
+# Google it, or wait for a later video to explore this...
+if __name__ == "__main__":
+  drawer = LineGraphDrawer()
+  drawer.draw_line_graph([3, 4, 5, 7, 4, 2, 1, 2])
 
-# The plan:
+
+
+# (old notes) The plan:
 # ex: [2, 20, 5]
 # { 0: 2, 1: 20, 2: 5 }
 # more like: { 2: 0, 20: 1, 5: 2 }
 # then sort: { 20: 1, 5: 2, 2: 0 }
+
 
