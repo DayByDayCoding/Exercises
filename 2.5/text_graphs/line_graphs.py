@@ -1,6 +1,3 @@
-import graph_config
-
-
 class LineGraphDrawer:
   """A class that draws line graphs from data."""
 
@@ -39,14 +36,6 @@ class LineGraphDrawer:
 
     # Bottom row
     print("└" + ("-" * row_width * self.config.width_spacing))
-
-
-# DBDC students: Wondering what this __main__ thing is all about?
-# Google it, or wait for a later video to explore this...
-if __name__ == "__main__":
-  config = graph_config.GraphConfig("&", 3)
-  drawer = LineGraphDrawer(config)
-  drawer.draw_line_graph([3, 4, 5, 7, 4, 2, 1, 2])
 
 
 
