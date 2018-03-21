@@ -1,11 +1,11 @@
-WIDTH_SPACING = 2  # arbitrary?
+import graph_config
 
 
 class LineGraphDrawer:
   """A class that draws line graphs from data."""
 
-  def __init__(self):
-    pass
+  def __init__(self, config):
+    self.config = config
 
   def assemble_data_dict(self, data):
     idx = 0
@@ -30,21 +30,22 @@ class LineGraphDrawer:
 
       if (row_number in assembled):
         for column_number in assembled[row_number]:
-          row_string[column_number] = "*"
+          row_string[column_number] = self.config.point_symbol
 
-        spacing = " " * (WIDTH_SPACING - 1)
+        spacing = " " * (self.config.width_spacing - 1)
         print("|" + spacing.join(row_string))
       else:
         print("|")
 
     # Bottom row
-    print("└" + ("-" * row_width * WIDTH_SPACING))
+    print("└" + ("-" * row_width * self.config.width_spacing))
 
 
 # DBDC students: Wondering what this __main__ thing is all about?
 # Google it, or wait for a later video to explore this...
 if __name__ == "__main__":
-  drawer = LineGraphDrawer()
+  config = graph_config.GraphConfig("&", 3)
+  drawer = LineGraphDrawer(config)
   drawer.draw_line_graph([3, 4, 5, 7, 4, 2, 1, 2])
 
 
